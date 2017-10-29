@@ -11,5 +11,10 @@
       <user-name>root</user-name>
       <introspection-schemas>*:habitat</introspection-schemas>
     </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="2d13b283-e576-4362-a63a-f3b530b5e23f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>

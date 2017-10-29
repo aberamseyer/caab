@@ -1,5 +1,6 @@
 $(function(){
-    $("#includeContent").load("index.html");
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
 });
 
 

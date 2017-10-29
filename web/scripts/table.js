@@ -1,7 +1,7 @@
 /**
  * Created by Commander Data on 10/27/2017.
  */
-angular.module('sortApp', [])
+angular.module('caab',[])
 
     .controller('mainController', function($scope) {
         $scope.sortType     = 'name'; // set the default sort type
