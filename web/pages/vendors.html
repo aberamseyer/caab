@@ -1,0 +1,53 @@
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <form>
+                <div class="form-group">
+                    <div class="input-group" id="search-div">
+                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                        <input id="search-button" type="text" class="form-control" placeholder="Search" ng-model="searchFish">
+                        <div id="newrecord"><button id="addbutton" type="button">Add Record</button></div>
+                    </div>
+                </div>
+            </form>
+            <td>
+                <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse" style="color: #111111">
+                    Sushi Roll
+                    <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+            </td>
+            <td>
+                <a href="#" ng-click="sortType = 'fish'; sortReverse = !sortReverse" style="color: #111111">
+                    Fish Type
+                    <span ng-show="sortType == 'fish' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'fish' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+            </td>
+            <td>
+                <a href="#" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse" style="color: #111111">
+                    Taste Level
+                    <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+            </td>
+            <td>Operations</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchFish">
+            <td>{{ roll.name }}</td>
+            <td>{{ roll.fish }}</td>
+            <td>{{ roll.tastiness }}</td>
+            <td>
+                <i class="fa fa-pencil-square-o" aria-hidden="true" style="size: 12px;color: #111111;"></i>
+                <i class="fa fa-file-text-o" aria-hidden="true" style="size: 12px;color: #111111;"></i>
+                <i class="fa fa-trash-o" aria-hidden="true" style="size: 12px;color: #111111;"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Table code ends -->
+</div>

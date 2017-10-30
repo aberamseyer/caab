@@ -50,12 +50,30 @@
 #search-button
 {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 20%;
     position: relative;
-    left: -22px;
-    top: 3px;
     color: rgba(0, 0, 0, 0.33);
+}
+
+#search-div
+{
+    padding: 15px 50px 15px 15px;
+    float: left;
+}
+
+#newrecord
+{
+    padding-left: 20px;
+    float: left;
+}
+
+#addbutton
+{
+    padding: 7px 7px;
+    border-radius: 3px;
+    border: none;
+    background-color: #e2e2e2;
+    color: #707070;
 }
 
 #footer
